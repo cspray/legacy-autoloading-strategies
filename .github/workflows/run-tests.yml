@@ -54,7 +54,7 @@ jobs:
       - name: Composer Install
         run: cd composer-autoload-single-package/legacy-app && composer install
       - name: Run Test
-        run: php composer-autoload-separate-packages/legacy-app/src/legacy-test.php
+        run: php composer-autoload-single-package/legacy-app/src/legacy-test.php
 
   single-package-new-test:
     runs-on: ubuntu-latest
