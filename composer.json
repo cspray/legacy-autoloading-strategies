@@ -1,0 +1,6 @@
+{
+  "name": "cspray/legacy-autoloading-strategies",
+  "require": {
+    "php": "^8.3"
+  }
+}

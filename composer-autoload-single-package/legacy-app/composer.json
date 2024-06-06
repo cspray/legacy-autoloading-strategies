@@ -1,0 +1,6 @@
+{
+  "name": "acme/legacy-app-single-package",
+  "autoload": {
+    "files": ["../new-app/autoload-shared-code.php"]
+  }
+}

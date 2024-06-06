@@ -1,0 +1,12 @@
+{
+  "name": "acme/new-app-shared-packages",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../shared-utils"
+    }
+  ],
+  "require": {
+    "acme/shared-utils-separate-packages": "dev-main"
+  }
+}

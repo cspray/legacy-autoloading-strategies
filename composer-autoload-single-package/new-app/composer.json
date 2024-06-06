@@ -1,0 +1,8 @@
+{
+  "name": "acme/new-app-single-package",
+  "autoload": {
+    "psr-4": {
+      "Acme\\NewApp\\": "src"
+    }
+  }
+}

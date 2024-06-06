@@ -1,0 +1,8 @@
+{
+  "name": "acme/shared-utils-separate-packages",
+  "autoload": {
+    "psr-4": {
+      "Acme\\NewApp\\SharedCode\\": "src"
+    }
+  }
+}

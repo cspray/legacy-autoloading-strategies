@@ -1,0 +1,12 @@
+{
+  "name": "acme/legacy-app-separate-packages",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../new-app/shared-utils"
+    }
+  ],
+  "require": {
+    "acme/shared-utils-separate-packages": "dev-main"
+  }
+}
