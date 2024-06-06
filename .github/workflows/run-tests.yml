@@ -38,3 +38,37 @@ jobs:
         run: cd composer-autoload-separate-packages/new-app/api && composer install
       - name: Run Test
         run: php composer-autoload-separate-packages/new-app/api/src/new-test.php
+
+  single-package-legacy-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+          tools: composer:2
+      - name: Setup problem matchers for PHP
+        run: echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+      - name: Composer Install
+        run: cd composer-autoload-single-package/legacy-app && composer install
+      - name: Run Test
+        run: php composer-autoload-separate-packages/legacy-app/src/legacy-test.php
+
+  single-package-new-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+          tools: composer:2
+      - name: Setup problem matchers for PHP
+        run: echo "::add-matcher::${{ runner.tool_cache }}/php.json"
+      - name: Composer Install
+        run: cd composer-autoload-single-package/new-app && composer install
+      - name: Run Test
+        run: php composer-autoload-single-package/new-app/src/new-test.php

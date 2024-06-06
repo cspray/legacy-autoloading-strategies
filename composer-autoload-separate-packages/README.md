@@ -2,7 +2,7 @@
 
 This strategy has the shared code between legacy and new apps split into its own module within the `new-app/shared-utils` directory. The business/domain logic is stored in `new-app/api`. These directory names are meant to be examples and could be named whatever is appropriate for your use case.
 
-Inside the `legacy-app` and `new-app` we define a `"repositories"` key in the `composer.json` configuration. There we setup our shared code to be loaded as a `path` type. When Composer creates the autoload script, carried out as part of running `composer install`, `composer update`, or `composer dump-autoload` it will install the code from the defined path instead of from Packagist.
+Inside the `legacy-app` and `new-app` we define a `"repositories"` key in the `composer.json` configuration. There we setup our shared code to be loaded as a `path` type. When Composer creates the autoload script, carried out as part of running `composer install`, `composer update`, or `composer dump-autoload` it will install the code from the defined path instead of from Packagist. Read more about the [Composer `"repositories"` configuration](https://getcomposer.org/doc/04-schema.md#repositories)
 
 ## Pros
 

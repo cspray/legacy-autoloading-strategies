@@ -6,7 +6,7 @@ This repo holds a series of strategies one might use when refactoring a legacy a
 - New code is stored outside legacy source directories and is not autoloaded into the legacy app
 - There is no access to public Packagist
 - There is no capacity to provide a private Packagist
-- New code is desired to be shared inside the legacy app
+- A limited subset of new code is desired to be shared inside the legacy app
 
 If the following assumptions do not apply to your use case it is likely these strategies might not apply to you. Please be sure to diligently review the strategies proposed before implementing them in your application.
 
@@ -38,10 +38,14 @@ class Utils {
 
 The `$output` passed in `new-test.php` will be `$strategyName . ' shared utils from new app'`. The `$output` passed in `legacy-test.php` will be `$strategyName . ' shared utils from legacy app'`. This output is displayed when running the corresponding test files. There are GitHub Actions that will run these test files for each strategy, showing the appropriate output for each strategy. Please review these Actions to see the different strategies being used.
 
+## Feedback
+
+Have your own strategy you'd like to document? See a problem or improvement with one of the existing strategies? Submit a pull request!
+
 ## Installation
 
 Generally speaking, this library is not meant to be installed directly, in production or dev. If you're wanting to see a strategy used please review the available GitHub Actions. However, if you wish to run the various test files locally the only supported means is to clone the repo.
 
 ```shell
-
+git clone git@github.com:cspray/legacy-autoloading-strategies.git
 ```
